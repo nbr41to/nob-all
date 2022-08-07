@@ -1,10 +1,10 @@
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 
 import clsx from 'clsx';
 
 export type Props = JSX.IntrinsicElements['button'] & {
   className?: string;
-  children: string;
+  children: string | ReactNode;
 };
 
 export const Button: FC<Props> = ({ className, children, ...rest }) => {
