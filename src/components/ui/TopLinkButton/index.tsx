@@ -20,10 +20,9 @@ export const TopLinkButton: FC<Props> = ({
     <a
       className={clsx(
         className,
-        'block h-28 rounded-xl bg-teal-500 py-4 px-6 text-lg font-bold text-white shadow',
-        'flex flex-col items-center justify-center gap-2',
-        'border-4 border-teal-600',
-        'hover:shadow-inner hover:brightness-90'
+        'block h-28 rounded-xl bg-teal-200  py-4 px-6 text-lg font-bold text-white',
+        'neumorphism-link active:neumorphism-link-active hover:neumorphism-link-hover',
+        'flex flex-col items-center justify-center gap-2'
       )}
       href={url}
       target="_blank"

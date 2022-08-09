@@ -12,7 +12,7 @@ type Props = {
 
 export const NotionBlocksPreview: FC<Props> = ({ blocks }) => {
   return (
-    <div className="space-y-8 px-16">
+    <div className="space-y-8 bg-white px-16">
       {blocks.map((block) => {
         /* // から始まるparagraphを非表示にする（独自ルール） */
         if (block?.paragraph?.rich_text[0]?.plain_text?.substr(0, 2) === '//')

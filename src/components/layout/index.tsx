@@ -15,12 +15,14 @@ export const Layout: FC<Props> = ({ children }) => {
 
   const breadcrumbsItems = useMemo(() => {
     const currentPath = router.pathname;
-    const paths = currentPath.split('/').splice(1);
+    if (currentPath === '/') return []; // home page
+
+    const paths = currentPath.split('/');
     const items = paths.map((path, index) => {
-      const href = `/${paths.slice(0, index + 1).join('/')}`;
+      const href = paths.slice(0, index + 1).join('/') || '/';
 
       return {
-        title: path,
+        title: path || 'home',
         href,
       };
     });

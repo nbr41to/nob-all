@@ -43,7 +43,7 @@ export const getStaticProps = async () => {
       </Accordion>
       <div className="flex flex-wrap justify-center gap-6">
         {articles.map((article) => (
-          <div key={article.link}>
+          <div key={article.link} className="rounded-md shadow">
             <h3 className="hidden">{article.title}</h3>
             <a
               className="relative block h-[168px] w-80 transition-transform duration-300 hover:scale-110"

@@ -13,7 +13,6 @@ import {
   SiTiktok,
 } from 'react-icons/si';
 
-import { Button } from '../ui/Button';
 import { TopLinkButton } from '../ui/TopLinkButton';
 
 export const MyLinks: FC = () => {
@@ -22,8 +21,10 @@ export const MyLinks: FC = () => {
 
   return (
     <>
-      <div className="fixed top-0 flex h-full w-full flex-col items-center justify-center gap-5 bg-slate-200">
-        <h2 className="text-center text-2xl font-bold">nob&#039;s links</h2>
+      <div className="fixed top-0 flex h-full w-full flex-col items-center justify-center gap-5 bg-teal-200">
+        <h2 className="text-center text-2xl font-bold text-white drop-shadow-xl">
+          nob&#039;s links
+        </h2>
         <div className="mx-auto grid max-w-[600px] grid-cols-2 gap-6 px-10">
           <TopLinkButton
             label="Profile"
@@ -60,24 +61,25 @@ export const MyLinks: FC = () => {
         </div>
 
         <div className="flex gap-12">
-          <Button
-            className="border-orange-500 bg-orange-400"
+          <button
+            className="neumorphism-link active:neumorphism-link-active hover:neumorphism-link-hover rounded-xl border-none bg-teal-200 py-4 px-6 text-white"
+            type="button"
             onClick={router.back}
           >
             <BsBackspaceFill size={40} />
-          </Button>
-          <Button
-            className="border-orange-500 bg-orange-400"
+          </button>
+          <button
+            className="neumorphism-link active:neumorphism-link-active hover:neumorphism-link-hover rounded-xl border-none bg-teal-200 py-4 px-6 text-white"
             type="button"
             onClick={visibleQrCodeHandlers.open}
           >
             <FaQrcode className="" size={40} />
-          </Button>
+          </button>
         </div>
       </div>
 
       {visibleQrCode && (
-        <div className="fixed top-0 flex h-full w-full flex-col items-center justify-center gap-5 bg-slate-200">
+        <div className="fixed top-0 flex h-full w-full flex-col items-center justify-center gap-5 bg-teal-200">
           <CloseButton
             className="absolute top-3 right-3"
             size="xl"

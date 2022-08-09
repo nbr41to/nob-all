@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-teal-100/50;
+}
+
+@layer utilities {
+  .neumorphism-light {
+    background: #e5fcf7;
+    box-shadow: 20px 20px 60px #c3d6d2, -20px -20px 60px #ffffff;
+  }
+  .neumorphism-link {
+    background: #9af6e4;
+    box-shadow: 20px 20px 40px #8bddcd, -20px -20px 40px #a9fffb;
+  }
+  .neumorphism-link-hover {
+    background: linear-gradient(145deg, #8bddcd, #a5fff4);
+    box-shadow: 20px 20px 40px #8bddcd, -20px -20px 40px #a9fffb;
+  }
+  .neumorphism-link-active {
+    background: #9af6e4;
+    box-shadow: inset 20px 20px 40px #8bddcd, inset -20px -20px 40px #a9fffb;
+  }
+}
