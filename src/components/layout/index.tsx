@@ -1,12 +1,33 @@
 import type { FC, ReactNode } from 'react';
 
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useMemo } from 'react';
+
+import { BreadcrumbsLinks } from './BreadcrumbsLinks';
 
 type Props = {
   children: ReactNode;
 };
 
 export const Layout: FC<Props> = ({ children }) => {
+  const router = useRouter();
+
+  const breadcrumbsItems = useMemo(() => {
+    const currentPath = router.pathname;
+    const paths = currentPath.split('/').splice(1);
+    const items = paths.map((path, index) => {
+      const href = `/${paths.slice(0, index + 1).join('/')}`;
+
+      return {
+        title: path,
+        href,
+      };
+    });
+
+    return items;
+  }, [router.pathname]);
+
   return (
     <div>
       <header>
@@ -25,9 +46,12 @@ export const Layout: FC<Props> = ({ children }) => {
             <a>NBPreview</a>
           </Link>
         </nav>
+        <BreadcrumbsLinks items={breadcrumbsItems} />
       </header>
       <main>{children}</main>
-      <footer />
+      <footer>
+        <BreadcrumbsLinks items={breadcrumbsItems} />
+      </footer>
     </div>
   );
 };
