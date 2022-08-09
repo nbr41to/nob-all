@@ -19,12 +19,11 @@
   "archived": false,
   "type": "heading_1",
   "heading_1": {
-    "color": "default",
-    "text": [
+    "rich_text": [
       {
         "type": "text",
         "text": {
-          "content": "見出し1 タイトル",
+          "content": "h1",
           "link": null
         },
         "annotations": {
@@ -35,9 +34,10 @@
           "code": false,
           "color": "default"
         },
-        "plain_text": "見出し1 タイトル",
+        "plain_text": "h1",
         "href": null
       }
-    ]
+    ],
+    "color": "default"
   }
 }

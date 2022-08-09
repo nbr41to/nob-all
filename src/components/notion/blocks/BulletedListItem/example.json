@@ -1,11 +1,11 @@
 {
   "object": "block",
-  "id": "7c6078fc-1630-48ec-9605-cda0da0fedf6",
+  "id": "6a3c1c89-b031-49d5-8dc2-d52c123ed892",
   "parent": {
     "type": "page_id",
     "page_id": "d362dedb-260c-4fa7-b132-57f119ea8d06"
   },
-  "created_time": "2021-10-03T05:45:00.000Z",
+  "created_time": "2021-10-03T05:44:00.000Z",
   "last_edited_time": "2021-10-03T05:45:00.000Z",
   "created_by": {
     "object": "user",
@@ -19,12 +19,11 @@
   "archived": false,
   "type": "bulleted_list_item",
   "bulleted_list_item": {
-    "color": "default",
-    "text": [
+    "rich_text": [
       {
         "type": "text",
         "text": {
-          "content": "箇条書きリスト",
+          "content": "箇条書きリスト1",
           "link": null
         },
         "annotations": {
@@ -35,9 +34,10 @@
           "code": false,
           "color": "default"
         },
-        "plain_text": "箇条書きリスト",
+        "plain_text": "箇条書きリスト1",
         "href": null
       }
-    ]
+    ],
+    "color": "default"
   }
 }

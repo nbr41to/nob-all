@@ -19,9 +19,7 @@
   "archived": false,
   "type": "to_do",
   "to_do": {
-    "checked": false,
-    "color": "default",
-    "text": [
+    "rich_text": [
       {
         "type": "text",
         "text": {
@@ -39,6 +37,8 @@
         "plain_text": "チェックボックス",
         "href": null
       }
-    ]
+    ],
+    "checked": false,
+    "color": "default"
   }
 }

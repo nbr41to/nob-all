@@ -19,12 +19,7 @@
   "archived": false,
   "type": "callout",
   "callout": {
-    "icon": {
-      "type": "emoji",
-      "emoji": "💡"
-    },
-    "color": "green_background",
-    "text": [
+    "rich_text": [
       {
         "type": "text",
         "text": {
@@ -42,6 +37,11 @@
         "plain_text": "コールアウト",
         "href": null
       }
-    ]
+    ],
+    "icon": {
+      "type": "emoji",
+      "emoji": "💡"
+    },
+    "color": "green_background"
   }
 }

@@ -19,8 +19,7 @@
   "archived": false,
   "type": "numbered_list_item",
   "numbered_list_item": {
-    "color": "default",
-    "text": [
+    "rich_text": [
       {
         "type": "text",
         "text": {
@@ -38,6 +37,7 @@
         "plain_text": "番号リスト1",
         "href": null
       }
-    ]
+    ],
+    "color": "default"
   }
 }
