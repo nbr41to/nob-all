@@ -41,6 +41,9 @@ export const Layout: FC<Props> = ({ children }) => {
           <Link href="/zenn">
             <a>Zenn</a>
           </Link>
+          <Link href="/blogs">
+            <a>Blogs</a>
+          </Link>
           <Link href="/links">
             <a>MyLinks</a>
           </Link>
@@ -50,7 +53,7 @@ export const Layout: FC<Props> = ({ children }) => {
         </nav>
         <BreadcrumbsLinks items={breadcrumbsItems} />
       </header>
-      <main>{children}</main>
+      <main className="mx-auto max-w-[700px]">{children}</main>
       <footer>
         <BreadcrumbsLinks items={breadcrumbsItems} />
       </footer>
