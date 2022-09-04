@@ -50,6 +50,9 @@ export const Layout: FC<Props> = ({ children }) => {
           <Link href="/sand/notion-blocks-preview">
             <a>NBPreview</a>
           </Link>
+          <Link href="/sand">
+            <a>Sandbox</a>
+          </Link>
         </nav>
         <BreadcrumbsLinks items={breadcrumbsItems} />
       </header>

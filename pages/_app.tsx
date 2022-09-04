@@ -1,4 +1,6 @@
 import 'styles/globals.css';
+import 'styles/mantineBase.css';
+
 import type { AppProps } from 'next/app';
 
 import { ModalsProvider } from '@mantine/modals';

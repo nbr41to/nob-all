@@ -13,4 +13,7 @@ module.exports = {
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: false, // TailWindCSSのResetCSSとMantineの競合を防ぐために無効化
+  },
 };
