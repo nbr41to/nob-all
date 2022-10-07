@@ -53,7 +53,7 @@ export const getStaticProps = async () => {
             >
               <Image
                 className="rounded-md"
-                src={article.enclosure.url}
+                src={article.enclosure?.url}
                 alt={article.title}
                 layout="fill"
                 objectFit="contain"

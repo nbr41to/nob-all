@@ -3,9 +3,6 @@ const exampleToken = 'mytoken-secret';
 export const pixelaCreateUser = async (username: string, token: string) => {
   const response = await fetch('https://pixe.la/v1/users', {
     method: 'POST',
-    // headers: {
-    //   'X-USER-TOKEN': token,
-    // },
     body: JSON.stringify({
       token,
       username,

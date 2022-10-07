@@ -1,0 +1,83 @@
+import { Button } from '@mantine/core';
+import Head from 'next/head';
+
+import {
+  pixelaCreateGraph,
+  pixelaCreateUser,
+  pixelaIncrementGraph,
+} from 'src/libs/frontend/pixela';
+
+<Head>
+  <title>n.o.b | sand/pixela</title>
+</Head>
+
+# Pixela
+
+継続を GitHub の草みたいに記録してくれる API を用いたツール
+
+https://pixe.la/
+
+```ts
+const pixelaCreateUser = async (username: string, token: string) => {
+  const response = await fetch('https://pixe.la/v1/users', {
+    method: 'POST',
+    body: JSON.stringify({
+      token,
+      username,
+      agreeTermsOfService: 'yes',
+      notMinor: 'yes',
+    }),
+  });
+
+  return response;
+};
+```
+
+<Button onClick={() => pixelaCreateUser('nbr41to', 'mytoken-secret')}>
+  execution pixelaCreateUser
+</Button>
+
+```ts
+const pixelaCreateGraph = async (username: string) => {
+  const response = await fetch(`https://pixe.la/v1/users/${username}/graphs`, {
+    method: 'POST',
+    headers: {
+      'X-USER-TOKEN': exampleToken,
+    },
+    body: JSON.stringify({
+      id: 'test-graph-id',
+      name: 'Pixela Test Graph',
+      unit: 'commit',
+      type: 'int',
+      color: 'shibafu',
+      timezone: 'Asia/Tokyo',
+    }),
+  });
+
+  return response.json();
+};
+```
+
+<Button onClick={() => pixelaCreateGraph('nbr41to')}>
+  execution pixelaCreateGraph
+</Button>
+
+```ts
+const pixelaIncrementGraph = async (username: string, graphId: string) => {
+  const response = await fetch(
+    `https://pixe.la/v1/users/${username}/graphs/${graphId}/increment`,
+    {
+      method: 'PUT',
+      headers: {
+        'X-USER-TOKEN': exampleToken,
+      },
+    }
+  );
+
+  return response.json();
+};
+```
+
+<Button onClick={() => pixelaIncrementGraph('nbr41to', 'test-graph-id')}>
+  execution pixelaIncrementGraph
+</Button>
