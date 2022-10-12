@@ -18,7 +18,7 @@ export const BlogItem: FC<Props> = ({ post }) => {
 
   return (
     <div
-      className="rounded border p-4"
+      className="rounded border p-4 transition-colors hover:bg-gray-300/20"
       tabIndex={0}
       role="button"
       onKeyDown={router.back}

@@ -2,6 +2,7 @@ import type { InferGetStaticPropsType, NextPage } from 'next';
 
 import { Home } from 'src/components/pages/Home';
 import { BlogItem } from 'src/components/ui/BlogItem';
+import { Container } from 'src/components/ui/Container';
 import { getBlogPosts } from 'src/libs/backend/notion/getPosts';
 
 export const getStaticProps = async () => {
@@ -21,11 +22,14 @@ const HomePage: NextPage<Props> = ({ posts }) => {
   return (
     <div>
       <Home />
-      <div>
-        {posts.map((post) => (
-          <BlogItem key={post.id} post={post} />
-        ))}
-      </div>
+
+      <Container>
+        <div className="space-y-4">
+          {posts.map((post) => (
+            <BlogItem key={post.id} post={post} />
+          ))}
+        </div>
+      </Container>
     </div>
   );
 };
