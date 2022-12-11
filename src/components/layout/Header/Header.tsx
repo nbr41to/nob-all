@@ -22,24 +22,12 @@ export const Header: FC = () => {
       </div>
 
       <nav className="flex justify-center gap-4 py-4">
-        <Link href="/">
-          <a>HOME</a>
-        </Link>
-        <Link href="/zenn">
-          <a>Zenn</a>
-        </Link>
-        <Link href="/blogs">
-          <a>Blogs</a>
-        </Link>
-        <Link href="/links">
-          <a>MyLinks</a>
-        </Link>
-        <Link href="/sand/notion-blocks-preview">
-          <a>NBPreview</a>
-        </Link>
-        <Link href="/sand">
-          <a>Sandbox</a>
-        </Link>
+        <Link href="/">HOME</Link>
+        <Link href="/zenn">Zenn</Link>
+        <Link href="/blogs">Blogs</Link>
+        <Link href="/links">MyLinks</Link>
+        <Link href="/sand/notion-blocks-preview">NBPreview</Link>
+        <Link href="/sand">Sandbox</Link>
       </nav>
     </header>
   );

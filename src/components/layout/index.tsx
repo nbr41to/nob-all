@@ -34,8 +34,10 @@ export const Layout: FC<Props> = ({ children }) => {
   return (
     <BackGroundCowWrapper>
       <Header />
-      <BreadcrumbsLinks items={breadcrumbsItems} />
-      <main className="mx-auto max-w-[700px]">{children}</main>
+      <div className="mx-auto max-w-[700px]">
+        <BreadcrumbsLinks items={breadcrumbsItems} />
+        <main>{children}</main>
+      </div>
       <footer>
         <BreadcrumbsLinks items={breadcrumbsItems} />
       </footer>

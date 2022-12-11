@@ -32,10 +32,11 @@ const SandPage: NextPage<Props> = ({ paths }) => {
         <ul>
           {paths.map((path) => (
             <li key={path}>
-              <Link href={`/sand/${path}`}>
-                <a className=" cursor-pointer underline hover:text-blue-400">
-                  {path}
-                </a>
+              <Link
+                className=" cursor-pointer underline hover:text-blue-400"
+                href={`/sand/${path}`}
+              >
+                {path}
               </Link>
             </li>
           ))}

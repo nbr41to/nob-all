@@ -21,6 +21,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 const HomePage: NextPage<Props> = ({ posts }) => {
   return (
     <div>
+      <h1 className="font--font-mpr1c">てすとだよ tests</h1>
       <Home />
 
       <Container>
