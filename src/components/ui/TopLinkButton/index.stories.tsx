@@ -1,12 +1,9 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import React from 'react';
-
-import { TopLinkButton } from '.';
+import { TopLinkButton as Component } from '.';
 
 export default {
-  title: 'UI/TopLinkButton',
-  component: TopLinkButton,
+  component: Component,
   argTypes: {
     children: {
       control: {
@@ -14,13 +11,10 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof TopLinkButton>;
+} as Meta<typeof Component>;
 
-const Template: ComponentStory<typeof TopLinkButton> = (args) => (
-  <TopLinkButton {...args} />
-);
-
-export const Default = Template.bind({});
-Default.args = {
-  label: 'Profile',
+export const Default: StoryObj<typeof Component> = {
+  args: {
+    label: 'Profile',
+  },
 };

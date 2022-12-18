@@ -1,14 +1,11 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import exampleBlock from './example.json';
 
-import { NumberedListItem } from '.';
+import { NumberedListItem as Component } from '.';
 
 export default {
-  title: 'Notion Block/NumberedListItem',
-  component: NumberedListItem,
+  component: Component,
   argTypes: {
     children: {
       control: {
@@ -16,13 +13,10 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof NumberedListItem>;
+} as Meta<typeof Component>;
 
-const Template: ComponentStory<typeof NumberedListItem> = (args) => (
-  <NumberedListItem {...args} />
-);
-
-export const Default = Template.bind({});
-Default.args = {
-  block: exampleBlock,
+export const Default: StoryObj<typeof Component> = {
+  args: {
+    block: exampleBlock,
+  },
 };

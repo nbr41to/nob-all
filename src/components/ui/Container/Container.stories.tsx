@@ -1,20 +1,16 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import React from 'react';
 
-import { Container } from './Container';
+import { Container as Component } from './Container';
 
 export default {
-  title: 'UI/Container',
-  component: Container,
+  component: Component,
   argTypes: {},
-} as ComponentMeta<typeof Container>;
+} as Meta<typeof Component>;
 
-const Template: ComponentStory<typeof Container> = (args) => (
-  <Container {...args} />
-);
-
-export const Default = Template.bind({});
-Default.args = {
-  children: <div className="h-40">children</div>,
+export const Default: StoryObj<typeof Component> = {
+  args: {
+    children: <div className="h-40">children</div>,
+  },
 };

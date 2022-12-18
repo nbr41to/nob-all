@@ -1,14 +1,11 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import exampleBlock from './example.json';
 
-import { ToDo } from '.';
+import { ToDo as Component } from '.';
 
 export default {
-  title: 'Notion Block/ToDo',
-  component: ToDo,
+  component: Component,
   argTypes: {
     children: {
       control: {
@@ -16,15 +13,28 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof ToDo>;
+} as Meta<typeof Component>;
 
-const Template: ComponentStory<typeof ToDo> = (args) => <ToDo {...args} />;
-
-export const Checked = Template.bind({});
-Checked.args = {
-  block: { ...exampleBlock, to_do: { ...exampleBlock.to_do, checked: true } },
+export const Checked: StoryObj<typeof Component> = {
+  args: {
+    block: {
+      ...exampleBlock,
+      to_do: {
+        ...exampleBlock.to_do,
+        checked: true,
+      },
+    },
+  },
 };
-export const NotChecked = Template.bind({});
-NotChecked.args = {
-  block: { ...exampleBlock, to_do: { ...exampleBlock.to_do, checked: false } },
+
+export const NotChecked: StoryObj<typeof Component> = {
+  args: {
+    block: {
+      ...exampleBlock,
+      to_do: {
+        ...exampleBlock.to_do,
+        checked: false,
+      },
+    },
+  },
 };

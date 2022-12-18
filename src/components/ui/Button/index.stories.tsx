@@ -1,12 +1,9 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import React from 'react';
-
-import { Button } from '.';
+import { Button as Component } from '.';
 
 export default {
-  title: 'UI/Button',
-  component: Button,
+  component: Component,
   argTypes: {
     children: {
       control: {
@@ -14,11 +11,10 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Button>;
+} as Meta<typeof Component>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  children: 'Button',
+export const Default: StoryObj<typeof Component> = {
+  args: {
+    children: 'Button',
+  },
 };

@@ -1,29 +1,23 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import React from 'react';
 
 import { Container } from '../Container';
-import { BackGroundCowWrapper } from './BackGroundCowWrapper';
+import { BackGroundCowWrapper as Component } from './BackGroundCowWrapper';
 
 export default {
-  title: 'UI/BackGroundCowWrapper',
-  component: BackGroundCowWrapper,
+  component: Component,
   argTypes: {},
-} as ComponentMeta<typeof BackGroundCowWrapper>;
+} as Meta<typeof Component>;
 
-const Template: ComponentStory<typeof BackGroundCowWrapper> = (args) => (
-  <BackGroundCowWrapper {...args} />
-);
-
-export const Default = Template.bind({});
-Default.args = {};
-export const InContainer = Template.bind({});
-InContainer.args = {
-  children: (
-    <div className="p-8">
-      <Container>
-        <div className="h-40">children</div>
-      </Container>
-    </div>
-  ),
+export const Default: StoryObj<typeof Component> = {
+  args: {
+    children: (
+      <div className="p-8">
+        <Container>
+          <div className="h-40">children</div>
+        </Container>
+      </div>
+    ),
+  },
 };

@@ -1,14 +1,11 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import exampleBlock from './example.json';
 
-import { Code } from '.';
+import { Code as Component } from '.';
 
 export default {
-  title: 'Notion Block/Code',
-  component: Code,
+  component: Component,
   argTypes: {
     children: {
       control: {
@@ -16,11 +13,10 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Code>;
+} as Meta<typeof Component>;
 
-const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  block: exampleBlock,
+export const Default: StoryObj<typeof Component> = {
+  args: {
+    block: exampleBlock,
+  },
 };
