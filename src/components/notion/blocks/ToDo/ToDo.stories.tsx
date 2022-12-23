@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import exampleBlock from './example.json';
-
-import { ToDo as Component } from '.';
+import { ToDo as Component } from './ToDo';
 
 export default {
   component: Component,

@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import exampleBlock from './example.json';
-
-import { Heading1 as Component } from '.';
+import { Heading2 as Component } from './Heading2';
 
 export default {
   component: Component,

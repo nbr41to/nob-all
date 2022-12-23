@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Code as Component } from './Code';
 import exampleBlock from './example.json';
-
-import { NumberedListItem as Component } from '.';
 
 export default {
   component: Component,

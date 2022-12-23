@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Callout as Component } from './Callout';
 import exampleBlock from './example.json';
-
-import { BulletedListItem as Component } from '.';
 
 export default {
   component: Component,

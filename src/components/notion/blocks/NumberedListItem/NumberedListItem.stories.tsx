@@ -1,18 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import exampleBlock from './example.json';
-
-import { Paragraph as Component } from '.';
+import { NumberedListItem as Component } from './NumberedListItem';
 
 export default {
   component: Component,
-  argTypes: {
-    children: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
+  argTypes: {},
 } as Meta<typeof Component>;
 
 export const Default: StoryObj<typeof Component> = {
